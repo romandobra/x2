@@ -1,0 +1,28 @@
+{
+    "x2": {
+        "project_path": "x2",
+        "output_path": "rendered",
+        "ext_path_prefix": "x2-ext",
+        "indent": "  "
+    },
+    "html": {
+        "indent": "",
+        "defaults": {
+            "script": "src",
+            "img": "src",
+            "title": "innerText",
+            "p": "innerText",
+            "button": "innerText",
+            "style": "innerText",
+            "span": "innerText"
+        },
+        "dont_close_tag": [
+            "img"
+        ],
+        "close_opening_tag_with_slash": [
+            "img"
+        ]
+    },
+    "save_debug": false,
+    "debug_path": "_"
+}

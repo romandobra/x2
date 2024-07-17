@@ -1,0 +1,9 @@
+html
+  head
+    title Test page
+  style
+  ? css
+  body
+    p#hello.red Hello,
+    + world!
+    ? logo
