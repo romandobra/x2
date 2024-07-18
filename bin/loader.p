@@ -33,7 +33,7 @@ $table[^table::create{line^#0a^load_text[$path]}]
 # load external x2 or add hash to result
     ^if($tag eq ?){
         ^result.add[
-            ^load_x2[$settings.x2.ext_path_prefix/${default}.x2;^eval($depth)]]
+            ^load_x2[../$settings.x2.ext_path_prefix/${default}.x2;^eval($depth)]]
     }{
         ^result.add[
             $.[$line_counter][
