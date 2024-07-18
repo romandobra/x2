@@ -4,7 +4,9 @@ $settings[^json:parse[^taint[as-is][$settings.text];]]
 
 
 # use p files
-$p[^file:list[../bin;.p^$]] ^p.menu{^use[../bin/$p.name]}
+$p[^file:list[../bin;.p^$]] ^p.menu{
+    ^if($p.name eq render.p){^continue[]}
+    ^use[../bin/$p.name]}
 
 
 # render
