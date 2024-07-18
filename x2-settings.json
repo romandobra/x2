@@ -16,12 +16,10 @@
             "style": "innerText",
             "span": "innerText"
         },
-        "dont_close_tag": [
+        "void_tags": [
             "img"
         ],
-        "close_opening_tag_with_slash": [
-            "img"
-        ]
+        "slash_void_tags": false
     },
     "save_debug": false,
     "debug_path": "_"
