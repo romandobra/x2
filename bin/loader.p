@@ -31,7 +31,7 @@ $table[^table::create{line^#0a^load_text[$path]}]
     $default[^default.trim[]]
 
 # load external x2 or add hash to result
-    ^if($tag eq ?){
+    ^if($tag eq "/"){
         ^result.add[
             ^load_x2[../$settings.x2.ext_path_prefix/${default}.x2;^eval($depth)]]
     }{

@@ -2,8 +2,8 @@ html
   head
     title Test page
   style
-  ? css
+  / css
   body
     p#hello.red Hello,
     + world!
-    ? logo
+    / logo
