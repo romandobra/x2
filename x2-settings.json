@@ -19,7 +19,8 @@
         "void_tags": [
             "img"
         ],
-        "slash_void_tags": false
+        "slash_void_tags": false,
+        "doctype":"html"
     },
     "save_debug": false,
     "debug_path": "_"

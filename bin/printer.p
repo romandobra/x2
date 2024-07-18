@@ -2,7 +2,11 @@
 $nl[^if($settings.html.indent eq ""){}{^#0a}]
 
 
-@print_html[h;ic][locals]
+@print_html[h;ic;first_line][locals]
+^if($first_line && $settings.html.doctype ne ""){
+    $result[<!DOCTYPE $settings.html.doctype>$nl] }
+
+
 ^h.foreach[k;v]{
 
     $result[${result}^open_tag[$v;^indent($ic);$nl]]
