@@ -55,12 +55,10 @@ $result[^hash::create[]]
 
 $p[$settings.html.defaults.[$t.__tag]]
 ^if($p eq ""){
-    ^l[default processor for '$t.__tag' not found]
-    ^return[] }
-
-^switch[$p]{
-    ^case[innerText]{ ^result.add[$.__text[$t.__default]] }
-    ^case[DEFAULT]{ ^result.add[$.[$p][$t.__default]] } }
+    ^result.add[$.__text[$t.__default]]
+}{
+    ^result.add[$.[$p][$t.__default]]
+}
 
 
 @select_inner[h;max_depth;min_line][locals]

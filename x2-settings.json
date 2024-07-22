@@ -10,11 +10,9 @@
         "defaults": {
             "script": "src",
             "img": "src",
-            "title": "innerText",
-            "p": "innerText",
-            "button": "innerText",
-            "style": "innerText",
-            "span": "innerText"
+            "link": "href",
+            "input": "name",
+            "textarea": "name"
         },
         "void_tags": [
             "img"
