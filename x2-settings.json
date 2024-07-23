@@ -1,5 +1,6 @@
 {
     "x2": {
+        "dont_clean_output":false,
         "project_path": "x2",
         "output_path": "rendered",
         "ext_path_prefix": "x2-ext",

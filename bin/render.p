@@ -20,7 +20,9 @@ $p[^file:list[../bin;.p^$]] ^p.menu{
 
 
 @render_dir[in;out][locals]
-^rmrf[$out]
+^if(!$settings.x2.dont_clean_output){
+    ^rmrf[$out] }
+
 
 $p[^file:list[$in]]
 
