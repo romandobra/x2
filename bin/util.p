@@ -20,3 +20,9 @@ $result[^taint[as-is][$result.text]]
 ^if(-d "$path"){
     $l[_]^l.save[$path/l]
     $l[^file:list[$path]]^l.menu{^rmrf[$path/$l.name;0]}}
+
+
+@cprf[from;to][l]
+^if(-f "$from"){^file:copy[$from;$to]}
+^if(-d "$from"){
+    $l[^file:list[$from]]^l.menu{^cprf[$from/$l.name;$to/$l.name]}}

@@ -3,6 +3,7 @@
         "project_path": "x2",
         "output_path": "rendered",
         "ext_path_prefix": "x2-ext",
+        "includes_path": "x2-inc",
         "indent": "  "
     },
     "html": {
