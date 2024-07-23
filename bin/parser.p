@@ -4,7 +4,7 @@ $result[^hash::create[]]
 ^h.foreach[c;tag]{
 
     ^if($tag.depth > $depth){ ^continue[] }
-    ^if(^tag.tag.match[^^\W]){ ^continue[] }
+    ^if(^tag.tag.match[^^\W] && $tag.tag ne "-"){ ^continue[] }
 
     $result.[$c][$.__tag[^extract_tag_name[$tag.tag]]]
     ^result.[$c].add[^extract_id[$tag.tag]]
@@ -23,6 +23,9 @@ $result[^hash::create[]]
             $.__inner[^process_lines[$inner;^eval($depth +1)]] ] }
 }
 
+^debug[$result;procecced-^file:justname[$path].json]
+
+
 @process_modyfiers[m;d;c][locals]
 $result[^hash::create[]]
 
@@ -40,6 +43,7 @@ $result[^hash::create[]]
         }
         ^case[+]{ $d[$d $v.default] }
         ^case[.]{ $c[$c $v.default] }
+        ^case[-]{ $d[$d $v.default] }
         ^case[#]{ $i[^v.default.trim[]] }
         ^case[DEFAULT]{
             ^l[unknown modyfier '$v.tag'] } } }

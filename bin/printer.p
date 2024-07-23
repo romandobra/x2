@@ -8,6 +8,10 @@ $nl[^if($settings.html.indent eq ""){}{^#0a}]
 
 
 ^h.foreach[k;v]{
+    ^if($v.__tag eq "-"){
+        $result[${result}^indent($ic)<!-- $v.__text -->$nl]
+        ^continue[]
+    }
 
     $result[${result}^open_tag[$v;^indent($ic);$nl]]
 

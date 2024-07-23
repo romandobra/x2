@@ -3,4 +3,3 @@ html
   body
     p#hello.red Hello,
     + dir!
-    / logo

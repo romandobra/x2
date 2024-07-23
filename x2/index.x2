@@ -1,3 +1,4 @@
+- hello comment
 html
   head
     title Test page
@@ -8,4 +9,4 @@ html
     + world!
     / logo
     / ext2
-    
+    - comment
