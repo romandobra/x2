@@ -10,10 +10,24 @@ $p[^file:list[../bin;.p^$]] ^p.menu{
 
 
 # render
-$p[^file:list[../$settings.x2.project_path;x2^$]]
+^render_dir[../$settings.x2.project_path;../$settings.x2.output_path]
+
+
+@render_dir[in;out][locals]
+^rmrf[$out]
+
+$p[^file:list[$in]]
+
 ^p.menu{
-    $x2[^load_x2[../$settings.x2.project_path/$p.name]]
+    ^if($p.dir){
+        ^render_dir[$in/$p.name;$out/$p.name]
+        ^continue[] }
+
+    ^l[f | $in/$p.name]
+
+    $x2[^load_x2[$in/$p.name]]
     $x2[^process_lines[$x2]]
     $html[^print_html[$x2;0;1]]
-    ^html.save[../$settings.x2.output_path/^file:justname[$p.name].html]
+    ^l[s | $out/^file:justname[$p.name].html]
+    ^html.save[$out/^file:justname[$p.name].html]
 }

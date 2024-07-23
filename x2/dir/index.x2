@@ -1,0 +1,6 @@
+html
+  head
+  body
+    p#hello.red Hello,
+    + dir!
+    / logo

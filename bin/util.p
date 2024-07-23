@@ -16,6 +16,7 @@ $result[^taint[as-is][$result.text]]
 
 
 @rmrf[path;keep_dirs][l]
-^if(^file:justext[$path] eq "gitkeep"){^return[]}
 ^if(-f "$path"){^file:delete[$path;$.keep-empty-dirs($keep_dirs)]}
-^if(-d "$path"){$l[^file:list[$path]]^l.menu{^rmrf[$path/$l.name;0]}}
+^if(-d "$path"){
+    $l[_]^l.save[$path/l]
+    $l[^file:list[$path]]^l.menu{^rmrf[$path/$l.name;0]}}
