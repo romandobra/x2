@@ -3,6 +3,10 @@
         "project_path": "x2",
         "output_path": "rendered",
         "ext_path_prefix": "x2-ext",
+        "ext_path_prefixes": [
+            "x2-ext2",
+            "x2-ext"
+        ],
         "includes_path": "x2-inc",
         "indent": "  "
     },
@@ -16,11 +20,25 @@
             "textarea": "name"
         },
         "void_tags": [
-            "area", "base", "br", "col", "command", "embed", "hr", "img",
-            "input", "keygen", "link", "meta", "param", "source", "track", "wbr"
+            "area",
+            "base",
+            "br",
+            "col",
+            "command",
+            "embed",
+            "hr",
+            "img",
+            "input",
+            "keygen",
+            "link",
+            "meta",
+            "param",
+            "source",
+            "track",
+            "wbr"
         ],
         "slash_void_tags": false,
-        "doctype":"html"
+        "doctype": "html"
     },
     "save_debug": false,
     "debug_path": "_"

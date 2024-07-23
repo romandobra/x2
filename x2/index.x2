@@ -7,3 +7,5 @@ html
     p#hello.red Hello,
     + world!
     / logo
+    / ext2
+    

@@ -32,8 +32,19 @@ $table[^table::create{line^#0a^load_text[$path]}]
 
 # load external x2 or add hash to result
     ^if($tag eq "/"){
+        ^if($settings.x2.ext_path_prefixes){
+            $use_prefix[]
+            ^settings.x2.ext_path_prefixes.foreach[;prefix]{
+                ^l[../$prefix/${default}.x2]
+                ^if(-f "../$prefix/${default}.x2"){
+                    $use_prefix[$prefix]
+                    ^break[] } }
+            ^if($use_prefix eq ""){
+                ^throw[;cant find any prefix in settings.x2.ext_path_prefixes]
+            }
+        }{ $use_prefix[$settings.x2.ext_path_prefix] }
         ^result.add[
-            ^load_x2[../$settings.x2.ext_path_prefix/${default}.x2;^eval($depth)]]
+            ^load_x2[../$use_prefix/${default}.x2;^eval($depth)]]
     }{
         ^result.add[
             $.[$line_counter][
