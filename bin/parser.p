@@ -43,7 +43,7 @@ $result[^hash::create[]]
         }
         ^case[+]{ $d[$d $v.default] }
         ^case[.]{ $c[$c $v.default] }
-        ^case[-]{ $d[$d $v.default] }
+        ^case[-]{  }
         ^case[#]{ $i[^v.default.trim[]] }
         ^case[DEFAULT]{
             ^l[unknown modyfier '$v.tag'] } } }
