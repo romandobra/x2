@@ -35,7 +35,6 @@ $table[^table::create{line^#0a^load_text[$path]}]
         ^if($settings.x2.ext_path_prefixes){
             $use_prefix[]
             ^settings.x2.ext_path_prefixes.foreach[;prefix]{
-                ^l[../$prefix/${default}.x2]
                 ^if(-f "../$prefix/${default}.x2"){
                     $use_prefix[$prefix]
                     ^break[] } }
