@@ -12,7 +12,11 @@ $p[^file:list[../bin;.p^$]] ^p.menu{
 # render
 ^render_dir[../$settings.x2.project_path;../$settings.x2.output_path]
 
-^cprf[../$settings.x2.includes_path;../$settings.x2.output_path]
+^if("$settings.x2.includes_path" ne ""){
+    ^cprf[../$settings.x2.includes_path;../$settings.x2.output_path]
+}
+
+
 
 @render_dir[in;out][locals]
 ^rmrf[$out]
