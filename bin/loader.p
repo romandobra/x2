@@ -39,7 +39,7 @@ $table[^table::create{line^#0a^load_text[$path]}]
                     $use_prefix[$prefix]
                     ^break[] } }
             ^if($use_prefix eq ""){
-                ^throw[;cant find any prefix in settings.x2.ext_path_prefixes]
+                ^throw[;cant find any prefix in settings.x2.ext_path_prefixes for '${default}']
             }
         }{ $use_prefix[$settings.x2.ext_path_prefix] }
         ^result.add[
