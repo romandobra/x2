@@ -17,8 +17,8 @@
             "script": "src",
             "img": "src",
             "link": "href",
-            "input": "name",
-            "textarea": "name"
+            "input": "id",
+            "textarea": "id"
         },
         "void_tags": [
             "area",
