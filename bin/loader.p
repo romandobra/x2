@@ -5,7 +5,7 @@ $line_counter(1)
 # load x2 text, results a hash of lines "line_counter [depth, tag, default]"
 @load_x2[path;starting_depth][locals]
 $result[^hash::create[]]
-$table[^table::create{line^#0a^load_text[$path]}]
+$table[^table::create{line^#0a- $path^#0a^load_text[$path]}]
 
 ^table.menu{
 
